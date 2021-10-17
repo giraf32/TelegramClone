@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TelegramClone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textCh">Чаты</string>
+    <string name="textS">Настройки</string>
+    <string name="victor">Victor</string>
+    <string name="settings_text_account">Аккаунт</string>
+    <string name="phone">899999999999</string>
+    <string name="settings_label_phone">Нажмите, чтобы изменить номер телефона</string>
+    <string name="settings_label_login">Имя пользователя</string>
+    <string name="setting_default_bio">О себе</string>
+    <string name="settings_label_bio">Напишите немного о себе</string>
+    <string name="settings_menu_change_name">Изменить имя</string>
+    <string name="settings_exit">Выход</string>
+    <string name="cd_register_image">TODO</string>
+    <string name="register_text_enter">Введите код</string>
+    <string name="cd_btn_next" />
+    <string name="sms_text">Мы отправили SMS с кодом проверки на ваш телефон</string>
+    <string name="register_hint_code">- - - - - -</string>
+    <string name="register_title_your_phone">Ваш телефон</string>
+    <string name="reister_toast_phone">Введите телефон</string>
+    <string name="hint_input_phone">Введите номер телефона</string>
+    <string name="settings_hint_input_name">Имя</string>
+    <string name="settings_hint_input_serName">Фамилия</string>
+    <string name="settings_toast_isEmpty">Имя не может быть пустым</string>
+    <string name="toast_data_update">данные обновлены</string>
+    <string name="hint_input_username">username</string>
+    <string name="settings_hint_bio">bio</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_settings_action_btn_menu"
+        app:showAsAction="ifRoom"
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/settings_menu_change_name"
+                android:icon="@drawable/ic_chenge_action"
+                android:title="@string/settings_menu_change_name"
+                app:showAsAction="never"/>
+            <item
+                android:id="@+id/settings_menu_exit"
+                android:icon="@drawable/ic_baseline_exit_now"
+                android:title="@string/settings_exit"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+
+
+</menu>
