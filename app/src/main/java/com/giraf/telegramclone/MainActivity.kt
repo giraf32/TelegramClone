@@ -2,10 +2,12 @@ package com.giraf.telegramclone
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import com.giraf.telegramclone.activities.RegisterActivity
 import com.giraf.telegramclone.databinding.ActivityMainBinding
 import com.giraf.telegramclone.models.User
@@ -26,13 +28,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
         initFirebase()
         initUser{
+            initContacts()
             initFields()
             initFunc()
         }
         APP_ACTIVITY = this
         
     }
-
+    
+    private fun initContacts() {
+        if (com.giraf.telegramclone.utility.checkPermission(READ_CONTACTS))
+            showToast("Чтение контактов")
+    }
+    
     private fun initFunc() {
         if (AUTH.currentUser != null) {
             setSupportActionBar(mToolbar)
@@ -58,5 +66,16 @@ class MainActivity : AppCompatActivity() {
     override fun onStop() {
         AppStates.updateState(AppStates.OFFLINE)
         super.onStop()
+    }
+    
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS)== PackageManager.PERMISSION_GRANTED){
+            initContacts()
+        }
     }
 }
